@@ -14,13 +14,13 @@ This script is only intended for use on Queen's Relectric ORION Pi-based headuni
 ```
 cd ~
 
-mkdir android_auto
+mkdir AndroidAuto
 
-cd ~/android_auto
+cd ~/AndroidAuto
 
-git clone https://github.com/BismuthOxide7/Relectric-AA-Subsystem
+git clone https://github.com/QURelectric/AndroidAuto
 
-cd Relectric-AA-Subsystem
+cd AndroidAuto
 
 sudo chmod +x install.sh
 
@@ -29,9 +29,9 @@ sudo chmod +x install.sh
 ```
 
 The installation script may take some time to fetch the required packages and build the c++ source code into an executable binary. 
-When the installer is done (It will print ``` Install Finished ```), the android auto executable can be started using the following commands:
+When the installer is done (It will print ``` Install Finished ```), and the android auto executable can be started using the following commands:
 ```
-cd ~/android_auto/Relectric-AA-Subsystem/openauto/bin
+cd ~/AndroidAuto/openauto/bin
 
 autoapp
 ```
