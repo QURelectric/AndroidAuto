@@ -16,8 +16,6 @@ cd ~
 
 mkdir AndroidAuto
 
-cd ~/AndroidAuto
-
 git clone https://github.com/QURelectric/AndroidAuto
 
 cd AndroidAuto
