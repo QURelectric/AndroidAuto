@@ -2,53 +2,47 @@ script_path=$(dirname "$(realpath -s "$0")")
 echo "Script directory is $script_path"
 
 ### dependencies #####
-dependencies=(
-    "alsa-utils"
-    "cmake"
-    "libboost-all-dev"
-    "libusb-1.0-0-dev"
-    "libssl-dev"
-    "libprotobuf-dev"
-    "protobuf-c-compiler"
-    "protobuf-compiler"
-    "libqt5multimedia5"
-    "libqt5multimedia5-plugins"
-    "libqt5multimediawidgets5"
-    "qtmultimedia5-dev"
-    "libqt5bluetooth5"
-    "libqt5bluetooth5-bin"
-    "qtconnectivity5-dev"
-    "pulseaudio"
-    "pulseaudio-module-bluetooth"
-    "librtaudio-dev"
-    "librtaudio6"
-    "qml-module-qtquick2"
-    "libglib2.0-dev"
-    "libgstreamer1.0-dev"
-    "gstreamer1.0-plugins-base-apps"
-    "gstreamer1.0-plugins-bad"
-    "gstreamer1.0-libav"
-    "gstreamer1.0-alsa"
-    "libgstreamer-plugins-base1.0-dev"
-    "qtdeclarative5-dev"
-    "libgstreamer-plugins-bad1.0-dev"
-    "libunwind-dev"
-    "qml-module-qtmultimedia"
-    "libqt5serialbus5-dev"
-    "libqt5serialbus5-plugins"
-    "libqt5serialport5-dev"
-    "libqt5websockets5-dev"
-    "libqt5svg5-dev"
-    "build-essential"
-    "libtool"
-    "autoconf"
-    "ffmpeg"
-  )
-installString="sudo apt-get install -y "
-
-for i in ${dependencies[@]}; do
-    installString+=" $i"
-done
+#Installed like this because the for loop wasnt working :)
+sudo apt-get install -y alsa-utils
+sudo apt-get install -y cmake
+sudo apt-get install -y libboost-all-dev
+sudo apt-get install -y libusb-1.0-0-dev
+sudo apt-get install -y libssl-dev
+sudo apt-get install -y libprotobuf-dev
+sudo apt-get install -y protobuf-c-compiler
+sudo apt-get install -y protobuf-compiler
+sudo apt-get install -y libqt5multimedia5
+sudo apt-get install -y libqt5multimedia5-plugins
+sudo apt-get install -y libqt5multimediawidgets5
+sudo apt-get install -y qtmultimedia5-dev
+sudo apt-get install -y libqt5bluetooth5
+sudo apt-get install -y libqt5bluetooth5-bin
+sudo apt-get install -y qtconnectivity5-dev
+sudo apt-get install -y pulseaudio
+sudo apt-get install -y pulseaudio-module-bluetooth
+sudo apt-get install -y librtaudio-dev
+sudo apt-get install -y librtaudio6
+sudo apt-get install -y qml-module-qtquick2
+sudo apt-get install -y libglib2.0-dev
+sudo apt-get install -y libgstreamer1.0-dev
+sudo apt-get install -y gstreamer1.0-plugins-base-apps
+sudo apt-get install -y gstreamer1.0-plugins-bad
+sudo apt-get install -y gstreamer1.0-libav
+sudo apt-get install -y gstreamer1.0-alsa
+sudo apt-get install -y libgstreamer-plugins-base1.0-dev
+sudo apt-get install -y qtdeclarative5-dev
+sudo apt-get install -y libgstreamer-plugins-bad1.0-dev
+sudo apt-get install -y libunwind-dev
+sudo apt-get install -y qml-module-qtmultimedia
+sudo apt-get install -y libqt5serialbus5-dev
+sudo apt-get install -y libqt5serialbus5-plugins
+sudo apt-get install -y libqt5serialport5-dev
+sudo apt-get install -y libqt5websockets5-dev
+sudo apt-get install -y libqt5svg5-dev
+sudo apt-get install -y build-essential
+sudo apt-get install -y libtool
+sudo apt-get install -y autoconf
+sudo apt-get install -y ffmpeg
 
 ################### AASKD ########################
 
