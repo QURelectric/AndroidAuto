@@ -1,3 +1,7 @@
+script_path=$(dirname "$(realpath -s "$0")")
+echo "Script directory is $script_path"
+
+
 ##### INSTALL AASDK #####
 
 sudo apt-get update
@@ -6,9 +10,11 @@ sudo apt-get -y install cmake build-essential git
 sudo apt-get install -y protobuf-compiler libprotobuf-dev libusb-1.0.0-dev libssl-dev libboost-dev libboost-system-dev libboost-log-dev
 
 git clone https://github.com/OpenDsh/aasdk
-### ADD CODE TO ACCOMODATE OPENSSL FIPS PATCH
-
+# OPENSSL FIPS PATCH #
 cd aasdk
+
+git apply $script_path/aasdk_openssl_fips.patch
+
 cmake -DCMAKE_BUILD_TYPE=Release .
 make -j2
 sudo make install
