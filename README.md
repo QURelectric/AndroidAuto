@@ -1,10 +1,10 @@
 # Relectric-AA-Subsystem 
 ### Android Auto for Queen's Relectric ORION Headunit
 
-The Relectric Android Auto subsytem relies on OpenAuto and the AASDK developped by f1xpl (https://github.com/f1xpl)
+The Relectric Android Auto subsytem relies on OpenAuto and the AASDK maintained by the OpenDash project (https://github.com/openDsh)
 
-This repository contains an installation script abridged from repositories belonging to https://github.com/openDsh
-The script was modified to only install aasdk, openauto, and required dependencies. 
+This repository contains an installation script abridged from repositories belonging to OpenDash.
+The scripts were modified to only install aasdk, openauto, and required dependencies. 
 
 ### THIS IS EXPERIMENTAL SOFTWARE AND NOT GUARANTEED TO WORK AT ALL
 This script is only intended for use on Queen's Relectric ORION Pi-based headunit. Use at your own risk. 
