@@ -29,7 +29,8 @@ sudo apt-get install libboost-all-dev libusb-1.0.0-dev libssl-dev cmake libproto
 
 git clone https://github.com/OpenDsh/openauto
 
-mkdir openauto_build; cd openauto_build
+mkdir openauto_build
+cd openauto_build
 
 cmake -DCMAKE_BUILD_TYPE=Release -DRPI3_BUILD=TRUE -DAASDK_INCLUDE_DIRS="../aasdk/include" -DAASDK_LIBRARIES="../aasdk/lib/libaasdk.so" -DAASDK_PROTO_INCLUDE_DIRS="../aasdk" -DAASDK_PROTO_LIBRARIES="../aasdk/lib/libaasdk_proto.so" ../openauto
 
