@@ -24,13 +24,13 @@ sudo make install
 #change to project root
 cd $script_path
 #clone h264bitstream
-git clone $h264bitstreamRepo
+git clone https://github.com/aizvorski/h264bitstream
 if [[ $? -eq 0 ]]; then
   echo -e h264bitstream Cloned ok '\n'
 else
   cd h264bitstream
   if [[ $? -eq 0 ]]; then
-    git pull $h264bitstreamRepo
+    git pull https://github.com/aizvorski/h264bitstream
     echo -e h264bitstream Cloned OK '\n'
     cd ..
   else
