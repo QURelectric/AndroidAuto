@@ -19,6 +19,71 @@ cmake -DCMAKE_BUILD_TYPE=Release .
 make -j2
 sudo make install
 
+#### INSTALL H264Bitstream #####
+
+#change to project root
+cd $script_path
+#clone h264bitstream
+git clone $h264bitstreamRepo
+if [[ $? -eq 0 ]]; then
+  echo -e h264bitstream Cloned ok '\n'
+else
+  cd h264bitstream
+  if [[ $? -eq 0 ]]; then
+    git pull $h264bitstreamRepo
+    echo -e h264bitstream Cloned OK '\n'
+    cd ..
+  else
+    echo h264bitstream clone/pull error
+    exit 1
+  fi
+fi
+
+#change into folder
+echo -e moving to h264bitstream '\n'
+cd h264bitstream
+
+echo Auto-reconfigure project
+autoreconf -i
+
+if [[ $? -eq 0 ]]; then
+  echo -e autoreconfed h264bitstream
+else
+  echo Unable to autoreconf h264bitstream
+  exit 1
+fi
+ echo Configuring h264bitstream
+ ./configure --prefix=/usr/local
+  if [[ $? -eq 0 ]]; then
+    echo -e h264bitstream configured successfully'\n'
+  else
+    echo h264bitstream configure failed with code $?
+  exit 1
+  fi
+
+  #beginning make
+  make
+
+  if [[ $? -eq 0 ]]; then
+    echo -e h264bitstream Make completed successfully '\n'
+  else
+    echo h264bitstream Make failed with code $?
+    exit 1
+  fi
+
+  #begin make install
+  sudo make install
+
+  if [[ $? -eq 0 ]]
+    then
+    echo -e h264bitstream installed ok'\n'
+    echo
+  else
+    echo h264bitstream install failed with code $?
+    exit 1
+  fi
+fi
+
 #### INSTALL OPENAUTO #####
 
 cd ..
