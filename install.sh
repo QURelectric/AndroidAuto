@@ -25,9 +25,9 @@ cd ..
 
 sudo apt-get -y install cmake build-essential git
 
-sudo apt-get install libboost-all-dev libusb-1.0.0-dev libssl-dev cmake libprotobuf-dev protobuf-c-compiler protobuf-compiler libqt5multimedia5 
-sudo apt-get install libqt5multimedia5-plugins libqt5multimediawidgets5 qtmultimedia5-dev libqt5bluetooth5 libqt5bluetooth5-bin qtconnectivity5-dev
-sudo apt-get install qtdeclarative5-dev qtbase5-dev pulseaudio librtaudio-dev
+sudo apt-get install -y libboost-all-dev libusb-1.0.0-dev libssl-dev cmake libprotobuf-dev protobuf-c-compiler protobuf-compiler libqt5multimedia5 
+sudo apt-get install -y libqt5multimedia5-plugins libqt5multimediawidgets5 qtmultimedia5-dev libqt5bluetooth5 libqt5bluetooth5-bin qtconnectivity5-dev
+sudo apt-get install -y qtdeclarative5-dev qtbase5-dev pulseaudio librtaudio-dev
 
 git clone https://github.com/OpenDsh/openauto
 
@@ -54,3 +54,5 @@ echo Checking if permissions exist
     else
       echo -e Rules exists'\n'
   fi
+
+  echo INSTALLATION FINISHED
