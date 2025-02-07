@@ -82,7 +82,6 @@ fi
     echo h264bitstream install failed with code $?
     exit 1
   fi
-fi
 
 #### INSTALL OPENAUTO #####
 
