@@ -85,7 +85,7 @@ fi
 
 #### INSTALL OPENAUTO #####
 
-cd ..
+cd $script_path
 
 sudo apt-get -y install cmake build-essential git
 
